@@ -45,6 +45,19 @@
             </StackPanel>
             <ComboBox x:Name="StatusComboBox" Width="120"/>
         </ListView>
+        <TextBox x:Name="Search" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="255,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Imie_s" Content="Imię" Grid.Column="1" HorizontalAlignment="Left" Margin="255,174,0,0" VerticalAlignment="Top" Width="48"/>
+        <Label x:Name="Nazwisko_s" Content="Nazwisko" Grid.Column="1" HorizontalAlignment="Left" Margin="255,215,0,0" VerticalAlignment="Top" Width="66"/>
+        <Label x:Name="Pesel_s" Content="Pesel" Grid.Column="1" HorizontalAlignment="Left" Margin="255,255,0,0" VerticalAlignment="Top" Width="48"/>
+        <Label x:Name="ID_s" Content="ID" Grid.Column="1" HorizontalAlignment="Left" Margin="255,287,0,0" VerticalAlignment="Top" Width="48"/>
+        <Label x:Name="Status_s" Content="Status" Grid.Column="1" HorizontalAlignment="Left" Margin="255,324,0,0" VerticalAlignment="Top" Width="48"/>
+        <Button Content="Pokaż" Grid.Column="1" HorizontalAlignment="Left" Height="20" Width="37" Background="#FF89AAF1" Margin="393,130,0,0" VerticalAlignment="Top" Click="Pokaz_Click"/>
+        <Label x:Name="Imie_s_v" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="329,174,0,0" VerticalAlignment="Top" Width="126"/>
+        <Label x:Name="Nazwisko_s_v" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="329,215,0,0" VerticalAlignment="Top" Width="173"/>
+        <Label x:Name="Pesel_s_v" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="329,255,0,0" VerticalAlignment="Top" Width="126"/>
+        <Label x:Name="ID_s_v" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="329,287,0,0" VerticalAlignment="Top" Width="126"/>
+        <Label x:Name="Status_s_v" Content="" Grid.Column="1" HorizontalAlignment="Left" Margin="329,324,0,0" VerticalAlignment="Top" Width="126"/>
+        <Label x:Name="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="55,277,0,0" VerticalAlignment="Top" Height="30" Width="118"/>
 
     </Grid>
 </Window>

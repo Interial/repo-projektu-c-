@@ -1,6 +1,7 @@
 ﻿using System;
 
 using System.Collections.ObjectModel;
+using System.Collections.Generic;
 using System.Windows;
 
 namespace WpfApplication1
@@ -10,30 +11,57 @@ namespace WpfApplication1
     /// </summary>
     public partial class MainWindow : Window
     {
-        public ObservableCollection<Pacjent> PacjentList { get; set; }
+        public List<Czlowiek> ListaOsob;
         public MainWindow()
         {
             InitializeComponent();
-            PacjentList = new ObservableCollection<Pacjent>();
+            ListaOsob = new List<Czlowiek>();
 
             this.StatusComboBox.ItemsSource = Enum.GetValues(typeof(Status));
             this.StatusComboBox.SelectedIndex = 0;
         }
- private void Dodaj_Click(object sender, RoutedEventArgs e)
+        private void Dodaj_Click(object sender, RoutedEventArgs e)
         {
-            
-            string Imie = this.textBox1.Text;
-            string Nazwisko = this.textBox2.Text;
-            int Pesel = int.Parse(this.textBox3.Text);
-            int Nr_id = int.Parse(this.textBox4.Text);
-            Status Status = (Status)Enum.Parse(typeof(Status), this.StatusComboBox.Text);
-            Pacjent Pacjent = new Pacjent(Imie, Nazwisko, Pesel, Nr_id, Status);
 
-            PacjentList.Add(Pacjent);
-           
+            string imie = this.textBox1.Text;
+            string nazwisko = this.textBox2.Text;
+            string pesel = this.textBox3.Text;
+            string nr_id = this.textBox4.Text;
+            Status status = (Status)Enum.Parse(typeof(Status), this.StatusComboBox.Text);
+            Czlowiek osoba = new Czlowiek(imie, nazwisko, pesel, nr_id, status);
+            try
+            {
+                osoba.sprawdzPesel();
+            }
+            catch (WyjatekPesel exc)
+            {
+                Label.Content = exc.Message;
+            }
+            finally
+            {
+
+            }
+            ListaOsob.Add(osoba);
+
+        }
+
+        private void Pokaz_Click(object sender, RoutedEventArgs e)
+        {
+            string Nazwisko = this.Search.Text;
+            foreach (Czlowiek c in ListaOsob.ToArray())
+            {
+                if (c.Nazwisko.Equals(Nazwisko))
+                {
+                    Imie_s_v.Content = c.Imie;
+                    Nazwisko_s_v.Content = c.Nazwisko;
+                    Pesel_s_v.Content = c.Pesel;
+                    ID_s_v.Content = c.Nr_id;
+                    Status_s_v.Content = c._Status;
+                }
+            }
         }
 
 
-             
+
     }
 }
