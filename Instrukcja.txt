@@ -1,6 +1,6 @@
 Witaj w programie registration organizer 
 
-Wpisz sobie 2 lub wiêcej pacjentów , a nastêpnie mo¿esz ich wyszukaæ , tak samo z lekarzami.
-Oprócz tego mo¿esz zobaczyæ czy rezonans jest dostêpny czy nie.
-W projekcie s¹ zawarte wszystkie rzeczy niezbêdne do zaliczenia projektu.
-hafe fun.
+Wpisz sobie 2 lub wiÄ™cej pacjentÃ³w , a nastÄ™pnie moÅ¼esz ich wyszukaÄ‡ , tak samo z lekarzami.
+OprÃ³cz tego moÅ¼esz zobaczyÄ‡ czy rezonans jest dostÄ™pny czy nie.
+W projekcie sÅ¡ zawarte wszystkie rzeczy niezbÄ™dne do zaliczenia projektu.
+hafe fun..
